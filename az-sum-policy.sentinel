@@ -1,2 +1,1 @@
-value = 10
-main = value > 5
+main = 10 > 5
