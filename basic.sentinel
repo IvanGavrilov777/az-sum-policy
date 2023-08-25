@@ -1,7 +1,7 @@
 import "strings"
 
 # Define the allowed resource name prefix
-allowed_prefix = "myapp-"
+allowed_prefix = "hhhapp-"
 
 # Main rule to check resource naming
 main = rule {
