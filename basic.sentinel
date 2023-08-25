@@ -1,1 +1,24 @@
-main = 10 > 5
+import "strings"
+
+# Define the allowed resource name prefix
+allowed_prefix = "myapp-"
+
+# Main rule to check resource naming
+main = rule {
+  all resources as _, resource_name {
+    strings.has_prefix(resource_name, allowed_prefix)
+  }
+}
+
+# Test data
+resources = [
+  "myapp-webserver",
+  "database",
+  "myapp-api-server",
+  "myapp-backend",
+]
+
+# Test the policy against the test data
+test = main {
+  resources
+}
